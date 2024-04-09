@@ -23,5 +23,5 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS workers (
 con.commit()
 cursor.executemany('INSERT INTO workers (name, age, salary) VALUES (?, ?, ?)', w)
 
-cursor.execute("select * from workers limit 6")
+cursor.execute("select * from workers limit 3 offset 1")
 print(cursor.fetchall())
